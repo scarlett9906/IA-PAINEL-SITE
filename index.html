@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel IA MIREXP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <div class="category" id="categories">
+            <button onclick="newChat('Mapa')">🗺️ Gerador de mapa</button>
+            <div id="Mapa"></div>
+
+            <button onclick="newChat('Scripts')">🎮 Scripts/lógicas</button>
+            <div id="Scripts"></div>
+
+            <button onclick="newChat('Cutscene')">🎬 Cutscene/vídeos</button>
+            <div id="Cutscene"></div>
+
+            <button onclick="newChat('UI')">🖥️ UI/Botões</button>
+            <div id="UI"></div>
+
+            <button onclick="newChat('Banner')">🖼️ Banner</button>
+            <div id="Banner"></div>
+
+            <button onclick="newChat('GamePass')">🎫 Game pass</button>
+            <div id="GamePass"></div>
+
+            <button onclick="newChat('Ideias')">🧠 Ideias de mapa</button>
+            <div id="Ideias"></div>
+
+            <button onclick="newChat('Geral')">💬 Chat geral</button>
+            <div id="Geral"></div>
+
+            <button onclick="openConfig()">⚙️ Configurações</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div id="chatTabs"></div>
+        <div id="messages"></div>
+        <div class="input-area">
+            <textarea id="userInput" placeholder="Digite..."></textarea>
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+        <div class="chat-actions">
+            <button onclick="linkChat()">🔗 Linkar</button>
+            <button onclick="deleteChat()">🗑️ Excluir</button>
+            <button onclick="renameChat()">📝 Renomear</button>
+            <button onclick="clearChat()">🧹 Limpar</button>
+            <button onclick="restoreChat()">♻️ Restaurar</button>
+        </div>
+    </div>
+
+    <audio id="clickSound" src="sounds/click.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
